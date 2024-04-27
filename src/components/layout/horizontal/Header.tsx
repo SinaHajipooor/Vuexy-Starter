@@ -11,17 +11,17 @@ import useHorizontalNav from '@menu/hooks/useHorizontalNav'
 
 const Header = () => {
   // Hooks
-  const { isBreakpointReached } = useHorizontalNav()
+  const {isBreakpointReached} = useHorizontalNav()
 
   return (
     <>
       <LayoutHeader>
         <Navbar>
-          <NavbarContent />
+          <NavbarContent/>
         </Navbar>
-        {!isBreakpointReached && <Navigation />}
+        {!isBreakpointReached && <Navigation/>}
       </LayoutHeader>
-      {isBreakpointReached && <Navigation />}
+      {isBreakpointReached && <Navigation/>}
     </>
   )
 }
