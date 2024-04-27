@@ -12,7 +12,7 @@ type Props = ChildrenType
 
 const Layout = ({ children }: Props) => {
   // Vars
-  const direction = 'ltr'
+  const direction = 'rtl'
   const systemMode = getSystemMode()
 
   return (

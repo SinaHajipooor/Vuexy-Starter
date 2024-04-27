@@ -23,7 +23,7 @@ import { getMode, getSystemMode } from '@core/utils/serverHelpers'
 
 const Layout = async ({ children }: ChildrenType) => {
   // Vars
-  const direction = 'ltr'
+  const direction = 'rtl'
   const mode = getMode()
   const systemMode = getSystemMode()
 

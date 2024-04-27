@@ -20,7 +20,7 @@ export const metadata = {
 
 const RootLayout = ({ children }: ChildrenType) => {
     // Vars
-    const direction = 'ltr'
+    const direction = 'rtl'
 
     return (
         <html id='__next' lang='en' dir={direction}>
