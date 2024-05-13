@@ -34,9 +34,9 @@ const FooterContent = () => {
 
     return (
         <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-            <Typography sx={{ mr: 2 }} textAlign='center'>
+            <Typography sx={{ mr: 2 }} textAlign='center' fontFamily='inherit'>
                 {footerText}
-                <Link style={{ textDecorationLine: 'none' }} target='_blank' href='http://sepehr-ict.ir/'>
+                <Link style={{ textDecorationLine: 'none', color: 'blue' }} target='_blank' href='http://sepehr-ict.ir/'>
                     {linkText}
                 </Link>
                 محفوظ است © {currentYear}
