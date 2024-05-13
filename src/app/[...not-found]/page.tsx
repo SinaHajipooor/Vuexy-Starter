@@ -7,18 +7,18 @@ import NotFound from '@views/NotFound'
 import { getServerMode, getSystemMode } from '@core/utils/serverHelpers'
 
 const NotFoundPage = () => {
-  // Vars
-  const direction = 'rtl'
-  const mode = getServerMode()
-  const systemMode = getSystemMode()
+    // Vars
+    const direction = 'rtl'
+    const mode = getServerMode()
+    const systemMode = getSystemMode()
 
-  return (
-    <Providers direction={direction}>
-      <BlankLayout systemMode={systemMode}>
-        <NotFound mode={mode} />
-      </BlankLayout>
-    </Providers>
-  )
+    return (
+        <Providers direction={direction}>
+            <BlankLayout systemMode={systemMode}>
+                <NotFound mode={mode} />
+            </BlankLayout>
+        </Providers>
+    )
 }
 
 export default NotFoundPage

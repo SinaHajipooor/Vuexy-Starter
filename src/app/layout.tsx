@@ -1,3 +1,4 @@
+
 import NextTopLoader from 'nextjs-toploader';
 
 // Third-party Imports
@@ -21,6 +22,7 @@ export const metadata = {
 const RootLayout = ({ children }: ChildrenType) => {
     // Vars
     const direction = 'rtl'
+
 
     return (
         <html id='__next' lang='en' dir={direction}>

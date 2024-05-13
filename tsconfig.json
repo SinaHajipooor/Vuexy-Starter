@@ -55,7 +55,7 @@
         }
     },
     "include": [
-        ".eslintrc.json",
+        ".eslintrc.js",
         "next.config.js",
         "postcss.config.js",
         "tailwind.config.js",
