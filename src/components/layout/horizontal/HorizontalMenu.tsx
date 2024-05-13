@@ -27,72 +27,72 @@ import verticalMenuItemStyles from '@core/styles/vertical/menuItemStyles'
 import verticalMenuSectionStyles from '@core/styles/vertical/menuSectionStyles'
 
 type RenderExpandIconProps = {
-  level?: number
+    level?: number
 }
 
 type RenderVerticalExpandIconProps = {
-  open?: boolean
-  transitionDuration?: VerticalMenuContextProps['transitionDuration']
+    open?: boolean
+    transitionDuration?: VerticalMenuContextProps['transitionDuration']
 }
 
 const RenderExpandIcon = ({ level }: RenderExpandIconProps) => (
-  <StyledHorizontalNavExpandIcon level={level}>
-    <i className='tabler-chevron-right' />
-  </StyledHorizontalNavExpandIcon>
+    <StyledHorizontalNavExpandIcon level={level}>
+        <i className='tabler-chevron-right' />
+    </StyledHorizontalNavExpandIcon>
 )
 
 const RenderVerticalExpandIcon = ({ open, transitionDuration }: RenderVerticalExpandIconProps) => (
-  <StyledVerticalNavExpandIcon open={open} transitionDuration={transitionDuration}>
-    <i className='tabler-chevron-right' />
-  </StyledVerticalNavExpandIcon>
+    <StyledVerticalNavExpandIcon open={open} transitionDuration={transitionDuration}>
+        <i className='tabler-chevron-right' />
+    </StyledVerticalNavExpandIcon>
 )
 
 const HorizontalMenu = () => {
-  // Hooks
-  const verticalNavOptions = useVerticalNav()
-  const theme = useTheme()
-  const { settings } = useSettings()
+    // Hooks
+    const verticalNavOptions = useVerticalNav()
+    const theme = useTheme()
+    const { settings } = useSettings()
 
-  // Vars
-  const { skin } = settings
-  const { transitionDuration } = verticalNavOptions
+    // Vars
+    const { skin } = settings
+    const { transitionDuration } = verticalNavOptions
 
-  return (
-    <HorizontalNav
-      switchToVertical
-      verticalNavContent={VerticalNavContent}
-      verticalNavProps={{
-        customStyles: verticalNavigationCustomStyles(verticalNavOptions, theme),
-        backgroundColor:
-          skin === 'bordered' ? 'var(--mui-palette-background-paper)' : 'var(--mui-palette-background-default)'
-      }}
-    >
-      <Menu
-        rootStyles={menuRootStyles(theme)}
-        renderExpandIcon={({ level }) => <RenderExpandIcon level={level} />}
-        menuItemStyles={menuItemStyles(settings, theme)}
-        renderExpandedMenuItemIcon={{ icon: <i className='tabler-circle text-xs' /> }}
-        popoutMenuOffset={{
-          mainAxis: ({ level }) => (level && level > 0 ? 14 : 12),
-          alignmentAxis: 0
-        }}
-        verticalMenuProps={{
-          menuItemStyles: verticalMenuItemStyles(verticalNavOptions, theme, settings),
-          renderExpandIcon: ({ open }) => (
-            <RenderVerticalExpandIcon open={open} transitionDuration={transitionDuration} />
-          ),
-          renderExpandedMenuItemIcon: { icon: <i className='tabler-circle text-xs' /> },
-          menuSectionStyles: verticalMenuSectionStyles(verticalNavOptions, theme)
-        }}
-      >
-        <MenuItem href='/' icon={<i className='tabler-smart-home' />}>
-          Home
-        </MenuItem>
-        <MenuItem href='/about' icon={<i className='tabler-info-circle' />}>
-          About
-        </MenuItem>
-      </Menu>
-      {/* <Menu
+    return (
+        <HorizontalNav
+            switchToVertical
+            verticalNavContent={VerticalNavContent}
+            verticalNavProps={{
+                customStyles: verticalNavigationCustomStyles(verticalNavOptions, theme),
+                backgroundColor:
+                    skin === 'bordered' ? 'var(--mui-palette-background-paper)' : 'var(--mui-palette-background-default)'
+            }}
+        >
+            <Menu
+                rootStyles={menuRootStyles(theme)}
+                renderExpandIcon={({ level }) => <RenderExpandIcon level={level} />}
+                menuItemStyles={menuItemStyles(settings, theme)}
+                renderExpandedMenuItemIcon={{ icon: <i className='tabler-circle text-xs' /> }}
+                popoutMenuOffset={{
+                    mainAxis: ({ level }) => (level && level > 0 ? 14 : 12),
+                    alignmentAxis: 0
+                }}
+                verticalMenuProps={{
+                    menuItemStyles: verticalMenuItemStyles(verticalNavOptions, theme, settings),
+                    renderExpandIcon: ({ open }) => (
+                        <RenderVerticalExpandIcon open={open} transitionDuration={transitionDuration} />
+                    ),
+                    renderExpandedMenuItemIcon: { icon: <i className='tabler-circle text-xs' /> },
+                    menuSectionStyles: verticalMenuSectionStyles(verticalNavOptions, theme)
+                }}
+            >
+                <MenuItem href='/home' icon={<i className='tabler-smart-home' />}>
+                    داشبورد
+                </MenuItem>
+                <MenuItem href='/about' icon={<i className='tabler-info-circle' />}>
+                    اطلاعات پایه
+                </MenuItem>
+            </Menu>
+            {/* <Menu
         rootStyles={menuRootStyles(theme)}
         renderExpandIcon={({ level }) => <RenderExpandIcon level={level} />}
         menuItemStyles={menuItemStyles(settings, theme)}
@@ -112,8 +112,8 @@ const HorizontalMenu = () => {
       >
         <GenerateHorizontalMenu menuData={menuData(dictionary, params)} />
       </Menu> */}
-    </HorizontalNav>
-  )
+        </HorizontalNav>
+    )
 }
 
 export default HorizontalMenu
