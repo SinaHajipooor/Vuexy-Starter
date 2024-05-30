@@ -26,8 +26,8 @@ import PerfectScrollbar from 'react-perfect-scrollbar'
 
 
 // Component Imports
-
 import classnames from 'classnames'
+
 
 import CustomAvatar from '@core/components/mui/Avatar'
 
@@ -135,7 +135,7 @@ const ShortcutsDropdown = ({ shortcuts }: { shortcuts: ShortcutsType[] }) => {
                                                             <Typography className='font-medium' color='text.primary'>
                                                                 {shortcut.title}
                                                             </Typography>
-                                                            <Typography variant='body2'>{shortcut.subtitle}</Typography>
+                                                            <Typography fontSize={10} variant='caption'>{shortcut.subtitle}</Typography>
                                                         </div>
                                                     </Link>
                                                 </Grid>
