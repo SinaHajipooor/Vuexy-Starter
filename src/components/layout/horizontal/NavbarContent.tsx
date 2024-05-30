@@ -13,7 +13,7 @@ import UserDropdown from '@components/layout/shared/UserDropdown'
 import useHorizontalNav from '@menu/hooks/useHorizontalNav'
 
 // Util Imports
-import ShortcutsDropdown, { ShortcutsType } from '@components/layout/shared/ShortcutsDropdown'
+import ShortcutsDropdown, { type ShortcutsType } from '@components/layout/shared/ShortcutsDropdown'
 import { horizontalLayoutClasses } from '@layouts/utils/layoutClasses'
 
 
