@@ -10,7 +10,7 @@ import UserDropdown from '@components/layout/shared/UserDropdown'
 
 // Util Imports
 import { verticalLayoutClasses } from '@layouts/utils/layoutClasses'
-import ShortcutsDropdown, { ShortcutsType } from '../shared/ShortcutsDropdown'
+import ShortcutsDropdown, { type ShortcutsType } from '../shared/ShortcutsDropdown'
 
 
 // Vars
