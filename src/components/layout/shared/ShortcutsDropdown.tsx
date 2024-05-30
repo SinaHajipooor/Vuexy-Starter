@@ -7,6 +7,8 @@ import type { ReactNode } from 'react'
 // Next Imports
 import Link from 'next/link'
 
+import { Icon } from '@iconify/react'
+
 // MUI Imports
 import IconButton from '@mui/material/IconButton'
 import Popper from '@mui/material/Popper'
@@ -20,11 +22,13 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import type { Theme } from '@mui/material/styles'
 
 // Third Party Components
-import classnames from 'classnames'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 
 // Component Imports
+
+import classnames from 'classnames'
+
 import CustomAvatar from '@core/components/mui/Avatar'
 
 // Config Imports
@@ -124,7 +128,8 @@ const ShortcutsDropdown = ({ shortcuts }: { shortcuts: ShortcutsType[] }) => {
                                                         className='flex items-center flex-col p-6 gap-3 bs-full hover:bg-actionHover'
                                                     >
                                                         <CustomAvatar size={50} className='bg-actionSelected text-textPrimary'>
-                                                            <i className={classnames('text-[1.625rem]', shortcut.icon)} />
+                                                            <Icon className={classnames('text-[1.625rem]')} icon={shortcut.icon} />
+                                                            {/* <i className={classnames('text-[1.625rem]', shortcut.icon)} /> */}
                                                         </CustomAvatar>
                                                         <div className='flex flex-col items-center text-center'>
                                                             <Typography className='font-medium' color='text.primary'>

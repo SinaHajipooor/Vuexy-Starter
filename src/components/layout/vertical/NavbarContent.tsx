@@ -17,9 +17,9 @@ import ShortcutsDropdown, { type ShortcutsType } from '../shared/ShortcutsDropdo
 const shortcuts: ShortcutsType[] = [
     {
         url: '/admin/membership/admins',
-        icon: 'tabler-calendar',
-        title: 'Calendar',
-        subtitle: 'Appointments'
+        icon: 'mdi:person-tie',
+        title: 'مدیران',
+        subtitle: 'فهرست مدیران'
     },
 ]
 
