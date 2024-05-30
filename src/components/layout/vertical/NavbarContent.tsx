@@ -21,6 +21,24 @@ const shortcuts: ShortcutsType[] = [
         title: 'مدیران',
         subtitle: 'فهرست مدیران'
     },
+    {
+        url: '/admin/membership/admins',
+        icon: 'mdi:office-building-outline',
+        title: 'سازمان‌ها',
+        subtitle: 'فهرست سازمان‌ها'
+    },
+    {
+        url: '/admin/membership/admins',
+        icon: 'mdi:shield-half-full',
+        title: 'نقش‌ها',
+        subtitle: 'فهرست نقش‌ها'
+    },
+    {
+        url: '/admin/membership/admins',
+        icon: 'mdi:key',
+        title: 'مجوزها',
+        subtitle: 'فهرست مجوزها'
+    },
 ]
 
 
