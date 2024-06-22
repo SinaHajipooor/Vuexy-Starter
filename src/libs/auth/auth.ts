@@ -10,10 +10,23 @@ type UserData = {
 export async function login(userData: UserData) {
     try {
         const response = await axiosConfig.post(`/auth/login`, userData);
-        const data = response.data;
 
-        return data;
+        return response.data;
     } catch (error) {
         throw error
+    }
+}
+
+
+// get user info
+export async function fetchUserDetails(token: string) {
+    try {
+        const response = await  axiosConfig.get(`/auth/user`, {
+            headers : { Authorization: `Bearer ${token}` },
+        });
+
+        return response.data;
+    } catch (error) {
+
     }
 }
