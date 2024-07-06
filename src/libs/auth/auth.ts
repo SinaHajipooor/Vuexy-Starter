@@ -18,13 +18,12 @@ export async function login(userData: UserData) {
 
 
 // get user info
-export async function fetchUserDetails(token: string) {
+export async function fetchUserDetails() {
     try {
-        const response = await axiosConfig.get(`/auth/user`, {
-            headers: { Authorization: `Bearer ${token}` },
-        });
+        const response = await axiosConfig.get(`/auth/user`);
 
         return response.data;
+
     } catch (error) {
         throw error
     }
