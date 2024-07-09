@@ -7,6 +7,8 @@ import type { ChildrenType } from '@core/types'
 // Style Imports
 import '@/app/globals.css'
 
+import NextAuthProvider from '@/context/NextAuthProvider'
+
 // Generated Icon CSS Imports
 import '@assets/iconify-icons/generated-icons.css'
 import Loading from "@/app/loading";
@@ -23,10 +25,12 @@ const RootLayout = ({ children }: ChildrenType) => {
     const direction = 'rtl';
 
     return (
-        <html id='__next' lang='en' dir={direction}>
-            <Loading />
-            <body className='flex is-full min-bs-full flex-auto flex-col'>{children}</body>
-        </html>
+        <NextAuthProvider>
+            <html id='__next' lang='en' dir={direction}>
+                <Loading />
+                <body className='flex is-full min-bs-full flex-auto flex-col'>{children}</body>
+            </html>
+        </NextAuthProvider>
     )
 }
 
