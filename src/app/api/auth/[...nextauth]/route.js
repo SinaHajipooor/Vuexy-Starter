@@ -1,11 +1,14 @@
 import NextAuth from "next-auth";
-import { options } from '@/app/api/auth/options'
+import { options } from '@/app/api/auth/options';
 
-export default async function resolver(req, res) {
+
+// Named exports for GET and POST requests
+export async function GET(req, res) {
     const handler = NextAuth(options);
-
-    await handler(req, res);
+    return await handler(req, res);
 }
 
-
-export { resolver as GET, resolver as POST };
+export async function POST(req, res) {
+    const handler = NextAuth(options);
+    return await handler(req, res);
+}
