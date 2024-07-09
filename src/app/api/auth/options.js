@@ -12,19 +12,15 @@ export const options = {
                 }
 
                 const response = await login(userInfo)
-
                 const userData = response?.data;
 
-
                 if (userData.token) {
-
                     return { ...userData, apiToken: userData.token, role: 'user' }
                 }
                 else {
                     return { error: response?.message }
                 }
             },
-
         }),
     ],
     callbacks: {
@@ -40,23 +36,19 @@ export const options = {
             if (user?.error) {
                 throw new Error(user?.error);
             }
-
             return true
         },
         async jwt({ token, user, trigger, session }) {
             if (trigger === 'update') {
                 return { ...token, ...session?.user }
             }
-
             if (user) {
                 return {
                     ...token, ...user
                 }
             }
-
             return token
         },
-
     },
     pages: {
         signIn: '/auth/login',
